@@ -1,0 +1,13 @@
+﻿{
+  "Diagonal Support": {
+    "model": "SM_SlantedSupport",
+    "type": "deco",
+    "price": 5.0,
+    "grid": true,
+    "heightDelta": 0.5,
+    "recolorable": true,
+    "recolorableOptions": {
+      "color1": "#471F00"
+    }
+  }
+}
