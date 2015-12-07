@@ -25,18 +25,30 @@ namespace Custom_Scenery.Decorators
 
                 if (options.ContainsKey("recolorableOptions"))
                 {
-                    Dictionary<string, object> clrs = (Dictionary <string, object>)options["recolorableOptions"];
+                    Dictionary<string, object> clrs = (Dictionary<string, object>)options["recolorableOptions"];
 
-                    colors.AddRange(clrs.Values.Select(color => FromHex((string) color)));
+                    foreach (KeyValuePair<string, object> clr in clrs)
+                    {
+                        colors.Add(FromHex((string)clr.Value));
+                    }
                 }
 
                 cc.customColors = colors.ToArray();
-                
+
                 foreach (Material material in Resources.FindObjectsOfTypeAll<Material>())
                 {
                     if (material.name == "CustomColorsDiffuse")
                     {
                         go.GetComponentInChildren<Renderer>().sharedMaterial = material;
+
+                        // Go through all child objects and recolor		
+                        Renderer[] renderCollection;
+                        renderCollection = go.GetComponentsInChildren<Renderer>();
+
+                        foreach (Renderer render in renderCollection)
+                        {
+                            render.sharedMaterial = material;
+                        }
 
                         break;
                     }

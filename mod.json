@@ -1,8 +1,7 @@
 {
     "BaseDir": "",
-    "EntryPoint": "Custom_Scenery.Main",
-    "IsDevelopment": false,
-    "Name": "Wooden Slanted Support",
+    "IsDevelopment": true,
+    "Name": "Your First Mod",
     "Project": "Custom Scenery.csproj",
 	"AssetBundleDir": "assetbundle"
 }
