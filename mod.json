@@ -1,7 +1,7 @@
 {
     "BaseDir": "",
     "IsDevelopment": true,
-    "Name": "Your First Mod",
+    "Name": "Diagonal Support",
     "Project": "Custom Scenery.csproj",
 	"AssetBundleDir": "assetbundle"
 }

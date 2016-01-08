@@ -3,8 +3,9 @@
     "model": "SM_SlantedSupport",
     "type": "deco",
     "price": 5.0,
-    "grid": true,
-    "heightDelta": 0.5,
+    "gridSubdivision": 1.0,
+    "snapCenter": true,
+    "heightDelta": 0.25,
     "recolorable": true,
     "recolorableOptions": {
       "color1": "#471F00"
